@@ -41,6 +41,11 @@ from ex1.functions import search_n as funct
 # but if the variable is not found in the list then raise a ValueError.
 
 def search_n(l, x):
+    '''
+    :param l:
+    :param x:
+    :return:
+    '''
 
     s = funct(l, x)
 

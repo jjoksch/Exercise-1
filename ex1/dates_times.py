@@ -31,12 +31,18 @@ Exercises for using the datetime and the calendar module
 '''
 
 from calendar import monthrange
-from datetime import date, time, datetime, timedelta
+from datetime import date, time
 
 # Define a function named last_of_month that takes an argument dt of type date
 # and returns a date object representing the last day of the month dt was in.
 
 def last_of_month(dt):
+
+    '''
+    :param dt: date
+    :return: date object with the last day of the month dt was in
+    '''
+
     return date(dt.year, dt.month, monthrange(dt.year, dt.month)[1])
 
 # Define a function named feed_the_gremlin which takes a time object as an
@@ -44,6 +50,11 @@ def last_of_month(dt):
 # otherwise.
 
 def feed_the_gremlin(t):
+    '''
+    :param t: time
+    :return: if t is between 0am and 0630am it returns False otherwise True
+    '''
+
     return not t < time(6, 30)
 
 # Define a function named how_long that takes two datetime objects dt and ref
@@ -53,6 +64,11 @@ def feed_the_gremlin(t):
 # If ref is before dt then use 'since' instead of 'until'
 
 def how_long(dt, ref):
+    '''
+    :param dt: datetime
+    :param ref: refference datetime
+    :return: the differnece between both imputs in days, minutes and seconds
+    '''
 
     d = ref - dt
 

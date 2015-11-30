@@ -48,24 +48,47 @@ def f():
 # Define a function named add that takes two numbers and returns the sum.
 
 def add(a,b):
+    '''
+    :param a: number 1
+    :param b: number 2
+    :return: sum of a and b
+    '''
+
     return a + b
 
 # Define a function named to_tuple that takes three arguments and returns a
 # tuple of these three arguments.
 
 def to_tuple(a, b, c):
+    '''
+    :param a: argument 1
+    :param b: argument 2
+    :param c: argument 3
+    :return: tuple of argument 1, 2 und 3
+    '''
+
     return a, b, c
 
 # Define a function named check5 that checks if a number is greater than 5 and
 # returns True or False.
 
 def check5(a):
+    '''
+    :param a: number to check
+    :return: True if a greater than 5, otherwise False
+    '''
+
     return a > 5
 
 # Define a function named check_n that check is a number is greater than n. The
 # number should be the first argument and n the second
 
 def check_n(a, n):
+    '''
+    :param a: number to check
+    :param n: number to compare
+    :return: True if a greater than n, otherwise False
+    '''
     return a > n
 
 #########
@@ -79,6 +102,11 @@ def check_n(a, n):
 # False if the number was greater than or equal to n.
 
 def check_list(a, n):
+    '''
+    :param a: list of numbers
+    :param n: number to compare with
+    :return: checks each number of a if it ist greater than n
+    '''
 
     result = []
 
@@ -92,6 +120,12 @@ def check_list(a, n):
 # need a third input argument.
 
 def check_list_nth(a, n, i):
+    '''
+    :param a: list of numbers
+    :param n: number to compare with
+    :param i: stepsize of the listnumbers
+    :return: checks each number of l with the step size if it greater than n
+    '''
 
     result = []
 
@@ -105,6 +139,11 @@ def check_list_nth(a, n, i):
 # last element without modifying the original list.
 
 def add_new_list(l, x):
+    '''
+    :param l: list
+    :param x: object to add at the end of l
+    :return: a copy of l with the object of x
+    '''
 
     new = l.copy()
     new.append(x)
@@ -116,6 +155,11 @@ def add_new_list(l, x):
 # value for nth to 2.
 
 def remove_nth(l, nth = 2):
+    '''
+    :param l: list
+    :param nth: step size
+    :return: a copy of l without the first and the every nth element
+    '''
 
     new = l.copy()
     del new[0::nth]
@@ -128,6 +172,11 @@ def remove_nth(l, nth = 2):
 # values
 
 def search_n(l, x):
+    '''
+    :param l: list
+    :param x: variable to search for in l
+    :return: the index of x in l and the variable x
+    '''
 
     for x_id, x_var in enumerate(l):
         if x_var == x:
@@ -144,6 +193,12 @@ def search_n(l, x):
 # the argument as the value.
 
 def args_to_dict(a, b, c):
+    '''
+    :param a: argument 1
+    :param b: argument 2
+    :param c: argument 3
+    :return: a dictionary with argument 1, 2, 3 with each position starting with 0
+    '''
 
     result = {0:a, 1:b, 2:c}
 
@@ -153,6 +208,10 @@ def args_to_dict(a, b, c):
 # number of arguments
 
 def args_to_dict_general(*l):
+    '''
+    :param l: list
+    :return: a dictionary with all arguments of l with each position
+    '''
 
     result = {}
     i = 0
@@ -163,10 +222,15 @@ def args_to_dict_general(*l):
 
     return result
 
-# Define a function named lists_to_dict that takes two lists of equal lenght
+# Define a function named lists_to_dict that takes two lists of equal length
 # named keys and values and builds a dictionary out of them.
 
 def lists_to_dict(keys, values):
+    '''
+    :param keys: list with keys
+    :param values: list with values
+    :return: merge keys and values to a dictionary
+    '''
 
     result = dict(zip(keys, values))
 
@@ -180,6 +244,11 @@ def lists_to_dict(keys, values):
 # dictionary.
 
 def search_list(a, b):
+    '''
+    :param a: list 1
+    :param b: list 2
+    :return: a dictionary with a index of a as key and the found object as value
+    '''
 
     result = {}
 
@@ -196,6 +265,11 @@ def search_list(a, b):
 # Return an empty string if there are no strings in the dictionary.
 
 def dict_to_string(dict, sep):
+    '''
+    :param dict: dictionary
+    :param sep: separator
+    :return:  a string with the dictionary value separated by the separator. if there are no strings the string is empty
+    '''
 
     result = ''
 
@@ -212,6 +286,10 @@ def dict_to_string(dict, sep):
 # two types should be stored in a list under the key 'others'
 
 def classify_by_type(l):
+    '''
+    :param l: list
+    :return: a dictionary with the keys "str", "int", and "others" and as the values the sorted list object
+    '''
 
     s = []
     i = []
