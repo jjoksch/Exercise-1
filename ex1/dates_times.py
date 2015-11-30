@@ -53,10 +53,18 @@ def feed_the_gremlin(t):
 # If ref is before dt then use 'since' instead of 'until'
 
 def how_long(dt, ref):
-    d = ref - dt
-    if ref < dt:
-        a = 'since '
-    else:
-        a = 'until '
 
-    return d.days + ' days, ' + d.minutes + ' minutes, ' + d.seconds + ' seconds ' + a + ref
+    d = ref - dt
+
+    d_d = d.days
+    d_m = d.seconds//60
+    d_s = d.seconds-(d_m * 60)
+
+    if ref < dt:
+        x = "since"
+    else:
+        x = "until"
+
+    result = "{} days, {} minutes, {} seconds {} {}".format(d_d, d_m, d_s, x, ref)
+
+    return result
